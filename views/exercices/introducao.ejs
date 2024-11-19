@@ -1,0 +1,223 @@
+<%- include('../partials/header') %>
+   
+   <section class="capa-container">
+      <img src="/img/posts/exercices.jpg" class="sdw" alt="Capa Boas Vindas">
+   </section>
+
+   <section class="exercices-container">
+      <h1>Exercícios: Introdução à Programação</h1>
+      <hr>
+
+      <h3 class="mt-space">1 - Escreva um programa que exiba a mensagem "Olá, Mundo!" na tela.</h3>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h > 
+            #include < stdlib.h > 
+
+            int main() { 
+
+               // Exibe a mensagem 
+               printf("Ola, Mundo!"); 
+
+               return 0; 
+
+            } 
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">
+         2 - Escreva um programa que leia um número inteiro digitado pelo usuário e o exiba de volta. 
+      </h3>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h > 
+            #include < stdlib.h >
+
+            int main() { 
+               // Variáveis 
+               int numero; 
+
+               // Entrada de dados 
+               printf("Digite um numero inteiro: "); 
+               scanf("%i", &numero); 
+
+               // Saída de dados 
+               printf("Voce digitou o numero: %i", numero); 
+
+               return 0; 
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">
+         3 - Escreva um programa que leia dois números inteiros e exiba a soma deles. 
+      </h3>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h > 
+            #include < stdlib.h >
+
+            int main() { 
+               // Variáveis 
+               int num1, num2, soma; 
+
+               // Entrada de dados 
+               printf("Digite o primeiro numero: "); 
+               scanf("%i", &num1); 
+
+               printf("Digite o segundo numero: "); 
+               scanf("%i", &num2); 
+
+               // Processamento 
+               soma = num1 + num2; 
+
+               // Saída de dados 
+               printf("A soma e: %i", soma);  
+
+               return 0; 
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">
+         4 - Escreva um programa que leia um número inteiro e exiba o dobro desse número. 
+      </h3>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h > 
+            #include < stdlib.h >
+
+            int main() { 
+               // Variáveis 
+               int numero, dobro; 
+
+               // Entrada de dados 
+               printf("Digite um numero inteiro: "); 
+               scanf("%i", &numero); 
+
+               // Processamento 
+               dobro = numero * 2; 
+
+               // Saída de dados 
+               printf("O dobro de %i e: %i", numero, dobro); 
+
+               return 0; 
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">
+         5 - Escreva um programa que leia o ano de nascimento de uma pessoa e o ano atual, e calcule a idade dessa pessoa. 
+      </h3>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h > 
+            #include < stdlib.h >
+
+            int main() { 
+               int ano_nascimento, ano_atual, idade; 
+               
+               // Entrada de dados 
+               printf("Digite o ano de nascimento: "); 
+               scanf("%d", &ano_nascimento); 
+
+               printf("Digite o ano atual: "); 
+               scanf("%d", &ano_atual); 
+
+               // Cálculo da idade 
+               idade = ano_atual - ano_nascimento; 
+
+               // Saída de dados 
+               printf("A pessoa tem %d anos.\n", idade);  
+
+               return 0; 
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">6 - Escreva um programa que some a sua altura mais a altura do seu colega.</h3>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h > 
+            #include < stdlib.h >
+
+            int main() { 
+               float altura1, altura2, resultado; 
+
+               // Entrada de dados 
+               printf("Digite sua altura: "); 
+               scanf("%f", &altura1); 
+
+               printf("Digite a altura do seu colega: "); 
+               scanf("%f", &altura2); 
+
+               // Processamento 
+               resultado = altura1 + altura2; 
+
+               // Saída de dados 
+               printf("A soma das alturas e %f”, resultado);  
+
+               return 0; 
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+   </section>
+
+
+
+<%- include('../partials/footer') %>
