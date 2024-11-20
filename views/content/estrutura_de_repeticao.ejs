@@ -19,10 +19,84 @@
             </p>
             
             <h3 class="mt-space">Por que utilizar estas Estruturas?</h3>
+            <ul>
+               <li><strong>Automatização de processos:</strong> Permitem executar ações repetitivas sem a necessidade de reescrever o mesmo código</li>
+               <li><strong>Eficiência:</strong> Reduz a quantidade de linhas utilizadas, assim, otimizando a compilação e legibilidade do programa
+               </li>
+            </ul>
 
+            <h3 class="mt-space">Tipos de Estruturas de Repetição</h3>
+            <p>Existem três tipos principais de laços de repetição na linguagem C:</p>
+            <ol>
+               <li><strong>While (Enquanto):</strong> Executa um bloco de código enquanto uma condição for verdadeira, caso a condição seja falsa o bloco de código não é executado. É comumente usado para executar um número indeterminado de loops.</li>
+            </ol>
+            <h4 class="mt-space"><strong>Exemplo em Pseudocódigo:</strong></h4>
+            <pre><code class="language-c">
+            enquanto (condição) {
+               // bloco de código
+            };                    
+            </code></pre>
+            <div class="mt-space">
+               <ol start="2">
+                  <li><strong>Do While (Faça Enquanto):</strong> Similar ao while, porém garante que o código seja executado pelo menos uma vez, pois a condição é verificada após a primeira execução. É utilizado para executar ao menos um loop ou um número indeterminado de loops.</li>
+               </ol>
+               <h4 class="mt-space"><strong>Exemplo em Pseudocódigo:</strong></h4>
+               <pre><code class="language-c">
+               faça {
+                  // bloco de código
+               } enquanto (condição);                                      
+               </code></pre>
+            </div>
+            <div class="mt-space">
+               <ol start="3">
+                  <li><strong>For (Para):</strong> Ele é utilizado para repetir um bloco de código um número definido de vezes, normalmente utilizado em iterações sobre arrays ou listas (são formas de armazenar múltiplos valores).</li>
+               </ol>
+               <h4 class="mt-space"><strong>Exemplo em Pseudocódigo:</strong></h4>
+               <pre><code class="language-c">
+               para (inicialização; condição; incremento) {
+                  // bloco de código
+               };                                       
+               </code></pre>
+            </div>
+            <h4 class="mt-space"><strong>Exemplos Práticos:</strong></h4>
+            <ul>
+               <li class="my-space"><strong class="text-dark">While:</strong> Usando o laço while para somar todos os elementos de uma lista.</li>
+            </ul>
+            <pre><code class="language-c">
+            soma = 0;
+            i = 0;
+            enquanto (i < tamanho(lista)) {
+               soma += lista[i];
+               i++;
+            };               
+            </code></pre>
+            <ul>
+               <li class="my-space"><strong class="text-dark">Do While:</strong> Usando do while para imprimir a soma de todos os valores positivos digitados pelo usuário até que digite um valor negativo.</li>
+            </ul>
+            <pre><code class="language-c">
+            {
+               int n;
+               int soma = 0;
+               do
+               {
+               printf("Digite um numero positivo para ser somado ou negativo para sair: ");
+               scanf("%d", &n);
+               if(n>=0 )
+               soma = soma + n;
+               }while( n >= 0 );
+               printf("A soma e %d\n", soma);
+               return 0;
+            }                            
+            </code></pre>
+            <ul>
+               <li class="my-space"><strong class="text-dark">For:</strong> Usando o for para contar de 1 a 10.</li>
+            </ul>
+            <pre><code class="language-c">
+            para (i = 1; i <= 10; i++) {
+               imprimir(i);
+            };                                          
+            </code></pre>
 
-            
-                   
             <%- include('../partials/card_exercices') %>
          </div>
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -11,7 +11,7 @@
   "description": "Site de apredizagem da linguagem C.",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.21.1"
-  },
-  "devDependencies": {}
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
 }

@@ -99,6 +99,11 @@ button:hover, a:hover {
    margin-top: 30px;
 }
 
+.my-space {
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
 .gdt-orange {
    background: linear-gradient(90deg, rgba(243,131,66,1) 0%, rgba(141,76,38,1) 100%);
 }
