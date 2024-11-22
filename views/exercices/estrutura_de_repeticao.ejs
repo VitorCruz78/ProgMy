@@ -8,8 +8,8 @@
       <h1>Exercícios: titulo</h1>
       <hr>
 
-      <h3 class="mt-space">1 - Escreva um programa que exiba a mensagem "Olá, Mundo!" na tela.</h3>
-      <p>Utilize o Editor de código!</p>
+      <h3 class="mt-space">1 - Imprimir os números de 1 a 10</h3>
+      <p>Escreva um programa que utilize uma estrutura “for” para imprimir.</p>
       <div class="accordion">
          <div class="accordion-item">
             <button class="accordion-header">
@@ -18,25 +18,190 @@
             </button>
             <div class="accordion-content">
             <pre><code class="language-c">
-            #include < stdio.h > 
-            #include < stdlib.h > 
-
-            int main() { 
-
-               // Exibe a mensagem 
-               printf("Ola, Mundo!"); 
-
-               return 0; 
-
-            } 
+            #include < stdio.h>
+            #include < stdlib.h>
+            
+            int main() {      
+               for (int i = 1; i <= 10; i++) {
+                  printf("%d\n", i);  // Imprime o valor de i
+               }
+               
+               return 0;
+            }
             </code></pre>
             </div>
          </div>
       </div>
 
+      <h3 class="mt-space">2 - Somar números de 1 a N</h3>
+      <p>Escreva um programa que leia um número N e utilize um “while” para somar N. O programa.</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h>
+            #include < stdlib.h>
+               
+            int main() {
+               int N, soma = 0, i = 1;  // Inicializa 'soma' com 0
+               
+               printf("Digite um numero inteiro: ");
+               scanf("%d", &N);
+               
+               while (i <= N) {
+                  soma += i;  
+                        
+                  // Adiciona i à soma
+                  i++;        
+                  i++;    
+                  // Incrementa i
+               }
+               
+               printf("A soma dos numeros de 1 ate %d e: %d \n" , N, soma);
+               
+               return 0;
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">3 - Verifique se um número é par ou ímpar (com reprodução)</h3>
+      <p>Escreva um programa que leia 5 números do usuário e, usando um laço “for”.</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h>
+            #include < stdlib.h>
+                  
+            int main() {       
+               int numero;
+                  
+               for (int i = 1; i <= 5; i++) {
+                  printf("Digite %d numero: ", i);
+                  
+                  scanf("%d", &numero);
+                  
+                  if (numero % 2 == 0) {    
+                     printf("%d e par.\n", numero);
+                  } else {
+                        printf("%d e impar.\n", numero);
+                  }
+               }
+                  
+               return 0;
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">4 - Tabuada</h3>
+      <p>Escreva um programa que exibe a tabuada de um número que o usuário escolher de 1 a 10.</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h>
+            #include < stdlib.h>
+                  
+            int main() {
+               int n, i;
+            
+               printf("Digite um numero para ver sua tabuada: ");
+               scanf("%d", &n);
+            
+               printf("Tabuada do %d:\n", n);
+               for (i = 1; i <= 10; i++) {
+                  printf("%d x %d = %d\n", n, i, n * i);
+               }
+                   
+               return 0;
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">5 - Contagem Regressiva</h3>
+      <p>Crie um programa que faz uma contagem regressiva a partir de um número inteiro positivo n fornecido pelo usuário até chegar a zero.</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h>
+            #include < stdlib.h>
+               
+            int main() {
+               int n;
+            
+               printf("Digite um numero inteiro positivo: ");
+               scanf("%d", &n);
+            
+               printf("Contagem regressiva:\n");
+               for (int i = n; i >= 0; i--) {
+                  printf("%d\n", i);
+               }
+            
+               return 0;
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">6 - Laço "For”  Encontrar o maior número em uma lista</h3>
+      <p>Escreva um programa que peça ao usuário uma quantidade de números inteiros e depois leia esses números.</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h>
+            #include < stdlib.h>
+                  
+            int main() {
+               int n, maior, num;
+            
+               printf("Quantos numeros deseja inserir? ");
+               scanf("%d", &n);
+            
+               for (int i = 1; i <= n; i++) {
+                  printf("Digite o numero %d: ", i);
+                  scanf("%d", &num);
+                  if (i == 1 || num > maior) {
+                     maior = num;
+                  }
+               }
+            
+               printf("O maior número e: %d\n", maior);
+               return 0;
+            }
+            </code></pre>
+            </div>
+         </div>
+      </div>
 
    </section>
-
-
 
 <%- include('../partials/footer') %>
