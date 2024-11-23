@@ -22,15 +22,242 @@
             </ul>
 
 
+            <h3 class="mt-space">Comando if:</h3>
             
-                   
+            <p>
+               Se a condição for verdadeira, o bloco é executado, senão, é ignorado.
+               A condição que fica dentro dos parênteses
+               é o que vai definir se vai entrar dentro do
+               comando if ou não, essa condição, pode ser
+               representada por variáveis, operadores e
+               números.
+               As variáveis são aquelas que definimos lá
+               no topo do código dentro do main.
+            </p>
+            <pre><code class="language-c">
+               if(< condição >) {
+                  < bloco_de_comandos >
+                  }
+            </code></pre>
+
+            <h3>Exemplo de if:</h3>
+            <pre><code class="language-c">
+               /*
+               Sistema que vai te filtrar o valor do usuário e vai te devolver uma mensagem!
+               */
+
+               #include < stdio.h >
+               #include < stdlib.h >
+
+               int main(void){
+                  int valor_do_usuario = 0;
+
+                  printf("Digite um valor entre 0 a 20: ");
+                  scanf("%i", &valor_do_usuario);
+                  fflush(stdin);
+
+                  if(valor_do_usuario<10){
+                     printf("\nO valor que o usuario digitou e menor que 10!");
+                  }
+                  if(valor_do_usuario==10){
+                     printf("\nO valor que o usuario digitou e 10!");
+                  }
+                  if(valor_do_usuario>10){
+                     printf("\nO valor que o usuario digitou e maior que 10!");
+                  }
+
+                  return 0;
+               }
+            </code></pre>
+
+            <h3 class="mt-space">Comando if-else:</h3>
+            <ul>
+               <li>
+                  Se a condição for verdadeira
+                  <li type="none">-Bloco do if é executado</li>
+                  <li type="none">-Bloco do else é ignorado</li>
+               </li>
+               <li>
+                  Caso contrário (condição falsa)
+                  <li type="none">-Bloco do if é ignorado</li>
+                  <li type="none">-Bloco do else é executado</li>
+               </li>
+            </ul>
+            <pre><code>
+               if(< condição >){
+                  < bloco_de_comandos1 >
+                  } else {
+                  < bloco_de_comandos2 >
+                  }
+            </code></pre>
+            <h3>Exemplo if-else</h3>
+            <pre><code>
+                  /*
+                  Exemplo de if-else:
+                  Faça um sistema onde o usuário interaja com o mesmo dizendo se acordou cedo ou não!
+                  */
+
+                  #include < stdio.h >
+                  #include < stdlib.h >
+
+                  int main(void) {
+                     int acordou;
+
+                     printf("Digite se acordou cedo (1 para sim e 2 para nao): ");
+                     scanf("%i", &acordou);
+                     fflush(stdin);
+
+                     if (acordou == 1) {
+                        printf("\nO usuario acordou cedo!");
+                     } else {
+                        printf("\nO usuario nao acordou cedo!");
+                     }
+
+                     return 0;
+                  }
+            </code></pre>
+            <h3 class="mt-space">Comando if-else encadeado:</h3>
+            <p>Nesse, usamos o if-else um dentro do outro para assim termos uma filtragem melhor
+               da resposta do usuário e com isso temos uma precisão melhor do que a
+               máquina deve responder permitido resolver problemas com multiplas condições.</p>
+
+            <h3 class="mt-space">
+               Exemplo de if-else encadeado:
+            </h3>
+            <pre><code>
+               /*
+               Exemplo de if-else encadeado:
+               Faça um sistema onde o usuário digite a temperatura do ambiente
+               e devolva se a mesma está aceitável ou não!
+               */
+
+               #include < stdio.h >
+               #include < stdlib.h >
+
+               int main(void) {
+                  int estacao_do_ano;
+                  float temp_usuario;
+
+                  printf("Digite 1 para verao ou 2 para inverno: ");
+                  scanf("%i", &estacao_do_ano);
+                  fflush(stdin);
+                  printf("Digite a temperatura do seu ambiente: ");
+                  scanf("%f", &temp_usuario);
+                  fflush(stdin);
+
+                  if (estacao_do_ano == 1) {
+                     if (temp_usuario >= 23 && temp_usuario <= 26) {
+                           printf("\nTemperatura ideal!");
+                     } else if (temp_usuario < 23) {
+                           printf("\nEsta frio!");
+                     } else if (temp_usuario > 26) {
+                           printf("\nEsta quente!");
+                     }
+                  } else if (estacao_do_ano == 2) {
+                     if (temp_usuario >= 20 && temp_usuario <= 23) {
+                           printf("\nTemperatura ideal!");
+                     } else if (temp_usuario < 20) {
+                           printf("\nEsta frio!");
+                     } else if (temp_usuario > 23) {
+                           printf("\nEsta quente!");
+                     }
+                  } else {
+                     printf("\nA estacao do ano digitada nao foi aceita");
+                  }
+
+                  return 0;
+               }
+            </code></pre>
+            <h3 class="mt-space">Comando switch case:</h3>
+            <p>
+               O switch case tem a mesma função do if-else encadeado, mas tem uma estrutura
+               totalmente diferente.</p>
+            <ul>
+               <li>
+                  Como se fosse vários if seguidos
+                  <li type="none">-Somente para comparações de igualdade</li>
+               </li>
+               <li>
+                  Caso seja igual a 1 dos valores
+                  <li type="none">-Executa o respectivo bloco</li>
+                  <li type="none">-Ignora todos os outros blocos</li>
+               </li>
+            </ul>
+            <h3 class="mt-space">
+               Exemplo da estrutura:
+            </h3>
+            <pre><code>
+               switch(< variavel >) {
+                  case < v1 >:
+                      < bloco_de_comandos1 >
+                      break;
+                  case < v2 >:
+                     < bloco_de_comandos2 >
+                      break;
+                  ...
+                  case < vN >:
+                      < bloco_de_comandosN >
+                      break;
+                  default:
+                      < bloco_de_comandos_padrao >
+                      break;
+              }              
+            </code></pre>
+            <h3 class="mt-space">
+               Exemplo de código com switch case:
+            </h3>
+            <pre><code>
+               int main(void) {
+                  int cardapio = 0;
+              
+                  printf("Digite:\n");
+                  printf("1 para entradas.\n");
+                  printf("2 para prato principal.\n");
+                  printf("3 para sobremesa.\n");
+                  printf("4 para bebidas.\n");
+              
+                  printf("\nDigite o numero correspondente ao que voce quer ver: ");
+                  scanf("%i", &cardapio);
+                  fflush(stdin);
+              
+                  switch (cardapio) {
+                      case 1:
+                          printf("\nBatata frita.");
+                          printf("\nTabua de queijos.");
+                          printf("\nPao e molhos diversos.");
+                          break;
+                      case 2:
+                          printf("\nPizza.");
+                          printf("\nSopa.");
+                          printf("\nHamburguer.");
+                          break;
+                      case 3:
+                          printf("\nBrownie.");
+                          printf("\nPanqueca.");
+                          printf("\nPudim.");
+                          break;
+                      case 4:
+                          printf("\nSuco.");
+                          printf("\nSuco Natural.");
+                          printf("\nRefrigerante.");
+                          break;
+                      default:
+                          printf("\nNumero incorreto!");
+                          break;
+                  }
+                  return 0;
+               }              
+            </code></pre>
             <%- include('../partials/card_exercices') %>
          </div>
-
+         
          <div class="topicos">
             <h3>Tópicos</h3>
             <ul>
                <li>Estruturas Condicionais</li>
+               <li>Comando if</li>
+               <li>Comando if-else</li>
+               <li>Comando switch case</li>
             </ul>
          </div>
       </div>
