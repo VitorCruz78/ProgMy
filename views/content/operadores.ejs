@@ -33,6 +33,224 @@
                fornece o resultado da divisão "real". O operador % fornece o resto da divisão de 
                dois inteiros.  
             </p>
+            <h3 class="mt-space"></h3>
+            <p>Assim seja o seguinte trecho de código:</p>
+            <pre><code class="language-c">
+               /*
+               Este exemplo contém apenas a parte do processamento por isso não contém
+               main, importação de bliblioteca ou retorna algum valor.
+               */
+
+               int a = 17, b = 3; 
+
+               int x, y; 
+
+               float z = 17. , z1, z2; 
+
+               x = a / b; 
+
+               y = a % b; 
+
+               z1 = z / b; 
+
+               z2 = a/b; 
+            </code></pre>
+            <h3 class="mt-space"></h3>
+            <p>
+               Ao final da execução destas linhas, os valores calculados seriam:<br> 
+               x = 5, y = 2, z1 = 5.666666 e z2 = 5.0.<br> 
+               Note que, na linha correspondente a z2, primeiramente é 23.<br> 
+               Feita uma divisão inteira (pois os dois operandos são inteiros). Somente após 
+               efetuada a divisão é que o resultado é atribuído a uma variável float.<br> 
+            </p>
+            <h3 class="mt-space"></h3>
+            <p>
+               Os operadores de incremento e decremento são unários que alteram a variável 
+               sobre a qual estão aplicados. O que eles fazem é incrementar ou decrementar, a 
+               variável sobre a qual estão aplicados, de 1. Então:
+            </p>
+            <pre><code class="language-c">
+               x++; /* INCREMENTA */
+               x--; /* DECREMENTA */
+            </code></pre>
+            <p>São equivalentes respectivamente a:</p>
+            <pre><code class="language-c">
+               x = x + 1; 
+               x = x - 1; 
+            </code></pre>
+            <p>
+               Estes operadores podem ser pré-fixados ou pós- fixados. A diferença é que 
+               quando são pré-fixados eles incrementam e retornam o valor da variável já 
+               incrementada. Quando são pós-fixados eles retornam o valor da variável sem o 
+               incremento e depois incrementam a variável. Então, em: <br>
+               x=23; <br> 
+               y=x++; <br> 
+               teremos, no final, y=23 e x=24. Em: <br> 
+               x=23; <br> 
+               y=++x; <br> 
+               teremos, no final, y=24 e x=24. <br>
+            </p>
+            <h4 class="mt-space">Curiosidade(?)</h4>
+            <p>
+               A linguagem de programação 
+               C++ tem este nome pois ela seria um "incremento" da linguagem C padrão. A 
+               linguagem C++ é igual à linguagem C só que com extensões que permitem a 
+               programação orientada a objeto, o que é um recurso extra.
+            </p>
+            <h3 class="mt-space"></h3>
+            <p>
+               O operador de atribuição do C é o =. O que ele faz é pegar o valor à direita 
+               e atribuir à variável da esquerda. Além disto ele retorna o valor que ele atribuiu. 
+               Isto faz com que as seguintes expressões sejam válidas: <br>
+               x=y=z=1.5; /* Expressao 1 */ <br> 
+               if (k=w) ... /* Expressão 2 */ <br>
+               A expressão 1 é válida, pois quando fazemos z=1.5 ela retorna 1.5, que é 
+               passado adiante, fazendo y = 1.5 e posteriormente x = 1.5. A expressão 2 será 
+               verdadeira se w for diferente de zero, pois este será o valor retornado por k=w. 
+               Pense bem antes de usar a expressão dois, pois ela pode gerar erros de 
+               interpretação. Você não está comparando k e w. Você está atribuindo o valor de 
+               w a k e usando este valor para tomar a decisão. 
+            </p>
+            <h3 class="mt-space">AUTO AVALIAÇÃO</h3>
+            <p>
+               Veja como você está,
+               Diga o resultado das variáveis x, y e z depois da seguinte seqüência de 
+               operações: 
+            </p>
+            <pre><code class="language-c">
+               int x,y,z; 
+               x=y=10; 
+               z=++x; 
+               x=-x; 
+               24 
+               y++; 
+               x=x+y-(z--);
+            </code></pre>
+            <p>
+               Operadores Relacionais e Lógicos 
+               Os operadores relacionais do C realizam comparações entre variáveis. 
+               São eles: <br>
+               > Maior do que <br> 
+               >= Maior ou igual a <br> 
+               < Menor do que <br> 
+               <= Menor ou igual a <br> 
+               == Igual a <br>
+               != Diferente de <br> 
+               Os operadores relacionais retornam verdadeiro (1) ou falso (0). Para 
+               verificar o funcionamento dos operadores relacionais, execute o programa abaixo:
+            </p>
+            <pre><code class="language-c">
+               /* Este programa ilustra o funcionamento dos operadores 
+               relacionais. */ 
+
+               #include <stdio.h> 
+
+               int main() { 
+
+               int i, j; 
+
+               printf("\nEntre com dois números inteiros: "); 
+
+               scanf("%d%d", &i, &j); 
+
+               printf("\n%d == %d é %d\n", i, j, i==j); 
+
+               printf("\n%d != %d é %d\n", i, j, i!=j); 
+
+               printf("\n%d <= %d é %d\n", i, j, i<=j); 
+
+               printf("\n%d >= %d é %d\n", i, j, i>=j); 
+
+               printf("\n%d < %d é %d\n", i, j, i<j); 
+
+               printf("\n%d > %d é %d\n", i, j, i>j); 
+
+               return(0); 
+
+               } 
+            </code></pre>
+            <p>
+               Você pode notar que o resultado dos operadores relacionais é sempre igual 
+               a 0 (falso) ou 1 (verdadeiro). <br>
+               Para fazer operações com valores lógicos (verdadeiro e falso) temos os 
+            </p>
+            <h3 class="mt-space">operadores lógicos: </h3>
+            <img src="/img/operadores/operador_acao.png" alt="">
+            <h3 class="mt-space">Operador Ação: </h3>
+            <img src="/img/operadores/operador_acao_ex1.png" alt="">
+            <img src="/img/operadores/operador_acao_ex2.png" alt="">
+            <p>
+               Usando os operadores relacionais e lógicos podemos realizar uma grande 
+               gama de testes. A tabela-verdade destes operadores é dada a seguir: 
+               O programa a seguir ilustra o funcionamento dos operadores lógicos. 
+               Compile-o e faça testes com vários valores para i e j: 
+            </p>
+            <pre><code class="language-c">
+            #include <stdio.h> 
+
+            int main() { 
+            
+            int i, j; 
+            
+            printf("informe dois números(cada um sendo 0 ou 1): "); 
+            
+            scanf("%d%d", &i, &j); 
+            
+            printf("%d AND %d é %d\n", i, j, i && j); 
+            
+            printf("%d OR %d é %d\n", i, j, i || j); 
+            
+            printf("NOT %d é %d\n", i, !i); 
+            
+            } 
+            </code></pre>
+            <p>
+               <b>Exemplo:</b> No trecho de programa abaixo a operação j++ será executada, 
+               pois o resultado da expressão lógica é verdadeiro: 
+            </p>
+            <pre><code class="language-c">
+               int i = 5, j =7; 
+               if ( (i > 3) && ( j <= 7) && ( i != j) ) j++; 
+            </code></pre>
+            <p>
+               V AND V AND V = V <br>
+               Mais um exemplo. O programa abaixo, imprime na tela somente os números pares entre 1 e 100, 
+               apesar da variação de i ocorrer de 1 em 1: 
+            </p>
+            <pre><code class="language-c">
+               /* Imprime os números pares entre 1 e 100. */ 
+               
+               #include <stdio.h> 
+
+               int main() { 
+
+               int i; 
+
+               for(i=1; i<=100; i++) 
+
+               if(!(i%2)) printf("%d ",i); /*  */ 
+
+               }
+            </code></pre>
+            <p>
+               o operador de resto dará falso (zero)quando usada 
+               número par. Esse resultado é invertido pelo !<br> 
+
+               Quando o C avalia expressões onde temos variáveis de tipos diferentes o 
+               compilador verifica se as conversões são possíveis. Se não são, ele não 
+               compilará o programa, dando uma mensagem de erro. Se as conversões forem 
+               possíveis ele as faz, seguindo as regras abaixo:<br>
+
+               1. Todos os chars e short ints são convertidos para ints. Todos os floats 
+               são convertidos para doubles.<br> 
+               2. Para pares de operandos de tipos diferentes: se um deles é long double o 
+               outro é convertido para long double; se um deles é double o outro é 
+               convertido para double; se um é long o outro é convertido para long; se 
+               um é unsigned o outro é convertido para unsigned.<br> 
+               - Expressões que Podem ser Abreviadas<br>
+               O C admite as seguintes equivalências, que podem ser usadas para simplificar 
+               expressões ou para facilitar o entendimento de um programa: 
+            </p>
             <%- include('../partials/card_exercices') %>
          </div>
 
@@ -40,8 +258,11 @@
             <h3>Tópicos</h3>
             <ul>
                <li>Operadores e Expressões</li>
+               <li>operadores lógicos</li>
+               <li>Operador Ação</li>
             </ul>
          </div>
+
       </div>
 
     </section>
