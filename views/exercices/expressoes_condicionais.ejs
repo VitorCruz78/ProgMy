@@ -5,11 +5,11 @@
    </section>
 
    <section class="exercices-container">
-      <h1>Exercícios: titulo</h1>
-      <hr>
-
-      <h3 class="mt-space">1 - Escreva um programa que exiba a mensagem "Olá, Mundo!" na tela.</h3>
-      <p>Utilize o Editor de código!</p>
+      <h1>Exercícios: Expressões Condicionais</h1>
+      <h3 class="mt-space">1. Escreva um programa em C que:</h3>
+      <h3 class="mt-space">Peça a nota de um aluno.</h3>
+      <p>Caso for maior ou igual a 6 exiba aprovado na tela.</p>
+      <p>Caso a nota for menor que 6 exiba reprovado.</p>
       <div class="accordion">
          <div class="accordion-item">
             <button class="accordion-header">
@@ -18,23 +18,155 @@
             </button>
             <div class="accordion-content">
             <pre><code class="language-c">
-            #include < stdio.h > 
-            #include < stdlib.h > 
-
-            int main() { 
-
-               // Exibe a mensagem 
-               printf("Ola, Mundo!"); 
-
-               return 0; 
-
-            } 
+               #include < stdio.h >
+               #include < stdlib.h >
+               int main(void){
+               float nota;
+               printf("Digite a nota do aluno: ");
+               scanf("%f", &nota);
+               if (nota >= 6.0) {
+               printf("Aprovado\n");
+               } else {
+               printf("Reprovado\n");
+               }
+               return 0;
+               }
             </code></pre>
             </div>
          </div>
       </div>
+      <h3 class="mt-space">2. Escreva um programa em C que faça o seguinte:</h3>
+      <p>Peça ao usuário para inserir dois números inteiros.</p>
+      <p>Compare os dois números e Exiba qual é o maior número.</p>
+      <p>Se os números forem iguais, exiba uma mensagem informando que os valores são iguais.</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+                  #include < stdio.h >
+                  #include < stdlib.h >
+                  int main(void){
+                     int numero1, numero2;
 
+                     printf("Digite o primeiro numero inteiro: ");
+                     scanf("%d", &numero1);
 
+                     printf("Digite o segundo numero inteiro: ");
+                     scanf("%d", &numero2);
+                     
+                     if (numero1 > numero2) {
+                     printf("O maior numero e: %d\n", numero1);
+                     } else if (numero2 > numero1) {
+                     printf("O maior numero e: %d\n", numero2);
+                     } else {
+                     printf("Os numeros sao iguais.\n");
+                     }
+                     return 0;
+                  }
+            </code></pre>
+            </div>
+         </div>
+      </div>
+      <h3 class="mt-space">3. Escreva um programa em C que:</h3>
+      <p>Solicite ao usuário um número inteiro.</p>
+      <p>Exiba na tela se o número digitado é ímpar ou par.</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+               <div class="accordion-content">
+               <pre><code class="language-c">
+                     #include < stdio.h >
+                     #include < stdlib.h >
+                     int main(void){
+                        int numero;
+
+                        printf("Digite um número inteiro: ");
+                        scanf("%i", &numero);
+
+                        if (numero % 2 == 0){
+                        printf("O numero %i e par.\n", numero);
+                        }else{
+                        printf("O número %i e impar.\n", numero);
+                        }
+                        
+                        return 0;
+                     }
+               </code></pre>
+               </div>
+            </div>
+      </div>
+      <h3 class="mt-space">4. Escreva um programa em C que:</h3>
+      <p>Solicite um número.</p>
+      <p>Transforme-o em par caso for ímpar.</p>
+      <p>Transforme-o em ímpar caso for par.</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+               <div class="accordion-content">
+               <pre><code class="language-c">
+                     #include < stdio.h >
+                     #include < stdlib.h >
+                     int main(void){
+                        int numero;
+
+                        printf("Digite um numero: ");
+                        scanf("%i", &numero);
+                        
+                        if (numero % 2 == 0) {
+                        numero += 1;
+                        printf("O numero era par. Somando +1: %i (impar)", numero);
+                        } else {
+                        numero -= 1;
+                        printf("O numero era impar. Agora e: %i (par)", numero);
+                        }
+                        return 0;
+                     }
+               </code></pre>
+               </div>
+            </div>
+      </div>
+      <h3 class="mt-space">5. Escreva um programa em C em que você atribua uma senha numérica à uma variável e torne-a como chave de acesso.</h3>
+      <p>Caso a senha for compatível, exibir "Senha correta."</p>
+      <p>Caso a senha for incompatível, exibir "Senha incorreta."</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+               <div class="accordion-content">
+               <pre><code class="language-c">
+                     #include < stdio.h >
+                     #include < stdlib.h >
+                     int main(void){
+                        int senha, resultado;
+                        senha = 1234;
+
+                        printf("Digite a senha: ");
+                        scanf("%i",&resultado);
+
+                        if (resultado == senha){
+                        printf("Senha correta.");
+                        }else{
+                        printf("Senha incorreta.");
+
+                        return 0;
+                      }
+               </code></pre>
+               </div>
+            </div>
+      </div>
+   <h3>Utilize o Editor de código!</h3>
    </section>
 
 

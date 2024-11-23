@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-   
+
    <section class="capa-container">
       <img src="/img/posts/exercices.jpg" class="sdw" alt="Capa Boas Vindas">
    </section>
@@ -8,7 +8,49 @@
       <h1>Exercícios: titulo</h1>
       <hr>
 
-      <h3 class="mt-space">1 - Escreva um programa que exiba a mensagem "Olá, Mundo!" na tela.</h3>
+      <h3 class="mt-space">1 - Em quais das partes criamos as variáveis na estrutura de programação C?</h3>
+      <p>
+         <br>a)Entrada de Dados
+         <br>b)Processamento 
+         <br>c)Saída de dados
+      </p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            Letra A, Entrada de Dados
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">2 - Qual das variáveis abaixo é usada para números reais?</h3>
+      <p>
+      <br>a) int
+      <br>b) float
+      <br>c) mat
+      </p>
+      
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            R: letra B, Float
+            </code></pre>
+            </div>
+         </div>
+      </div>
+
+      <h3 class="mt-space">3 - Construa um programa que peça o raio de uma esfera, e calcule o volume da esfera através
+         do valor do raio.</h3>
       <p>Utilize o Editor de código!</p>
       <div class="accordion">
          <div class="accordion-item">
@@ -18,25 +60,136 @@
             </button>
             <div class="accordion-content">
             <pre><code class="language-c">
-            #include < stdio.h > 
-            #include < stdlib.h > 
+            #include < stdio.h>
+            #include < stdlib.h>
+                   
+            int main(void){
+            float raio, volume;
+            float PI = 3.14159f;
+                  
+            printf("Digite o raio da esfera:") ;
+            scanf("%f",&raio);
+                     
+            volume = (4.0f / 3.0f) * PI * (raio * raio * raio);
+                     
+            printf("O volume da esfera com raio %.2f e: %.2f\n", raio, volume);
+                  
+            return 0;
+            }
+                  
+            </code></pre>
+            </div>
+         </div>
+      </div>
 
-            int main() { 
+      <h3 class="mt-space">4 - Escreva um programa em C que: </h3>
+      <p>
+         Solicite ao usuário para inserir três notas de um aluno (as notas devem ser números decimais).
+         <br>Calcule a média aritmética dessas notas.
+         <br>Exiba a média calculada na tela.
+      </p>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include < stdio.h>
+            #include < stdlib.h>
+                  
+            int main() {
+            float nota1, nota2, nota3, media;
+                  
+            printf("Digite a primeira nota: ");
+            scanf("%f", &nota1);
+            printf("Digite a segunda nota: ");
+            scanf("%f", &nota2);
+            printf("Digite a terceira nota: ");
+            scanf("%f", &nota3);
+                  
+            media = (nota1 + nota2 + nota3) / 3;
+            printf("A media das notas e: %.2f", media);
+                      
+            return 0;
+            }
+                  
+            </code></pre>
+            </div>
+         </div>
+      </div>
 
-               // Exibe a mensagem 
-               printf("Ola, Mundo!"); 
+      <h3 class="mt-space">5 - Escreva um programa em C que converta uma temperatura em Celsius para Fahrenheit. O
+         usuário deve inserir a temperatura em Celsius (um número de ponto flutuante).
+      </h3>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include <stdio.h>
+            #include <stdlib.h>
+                  
+            int main() {
+            float celsius, fahrenheit;
+                  
+            printf("Digite a temperatura em Celsius: ");
+            scanf("%f", &celsius);
+                  
+            fahrenheit = (celsius * 9/5) + 32;
+            printf("A temperatura em Fahrenheit e: %.2f\n", fahrenheit);
+                      
+            return 0;
+            }
+                   
+            </code></pre>
+            </div>
+         </div>
+      </div>
 
-               return 0; 
-
-            } 
+      <h3 class="mt-space">6 - Crie um programa que calcule o salário de um funcionário, considerando a quantidade de
+         horas trabalhadas e o valor da hora.</h3>
+      <p>Utilize o Editor de código!</p>
+      <div class="accordion">
+         <div class="accordion-item">
+            <button class="accordion-header">
+               <span>Resposta:</span>
+               <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            </button>
+            <div class="accordion-content">
+            <pre><code class="language-c">
+            #include <stdio.h>
+            #include <stdlib.h>
+                  
+            int main() {
+            float horasTrabalhadas, valorHora, salario;
+                  
+            printf("Digite as horas trabalhadas: ");
+            scanf("%f", &horasTrabalhadas);
+            printf("Digite o valor da hora: ");
+            scanf("%f", &valorHora);
+                  
+            salario = horasTrabalhadas * valorHora;
+            printf("Salario: %.2f", salario);
+                  
+            return 0;
+            }
+                   
             </code></pre>
             </div>
          </div>
       </div>
 
 
+
    </section>
 
 
 
-<%- include('../partials/footer') %>
+   <%- include('../partials/footer') %>

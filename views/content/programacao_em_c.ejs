@@ -1,36 +1,204 @@
 <%- include('../partials/header') %>
-   
+
    <section class="capa-container">
       <img src="/img/posts/programacao-em-c.jpg" class="sdw" alt="Capa Boas Vindas">
-    </section>
+   </section>
 
-    <section class="container">
+   <section class="container">
       <div class="post-container">
          <div class="post-content">
             <h1>Estrutura de um Programa em C</h1>
             <hr>
-            
+
             <h3 class="mt-space">Introdução</h3>
             <p>
                Criada em 1972 Bell por Dennis Ritchie a linguagem C se tornou uma das mais
                bem-sucedidas linguagens de programação.
+               Para iniciar precisamos importar algumas bibliotecas para utilizarmos na hora de programar,
+               essas bibliotecas são como pacotes com ferramentas que o computador pode utilizar, e que
+               podemos chamar no nosso programa quando quisermos.
+            </p>
+
+            <pre><code class="language-c">
+            #include < stdio.h>;
+            #include < stdlib.h>;
+            </code></pre>
+
+            <p class="mt-space">
+               Após isso, iremos abrir o nosso “bloco” da função “Main”, pense nele como uma folha de
+               instruções que o computador irá ler e realizar ações, o computador vai ler essas instruções de cima
+               pra baixo e da esquerda pra direita, e vai separar as linhas com “;”, ou seja, cada linha TEM que
+               terminar em “;” assim a máquina vai entender que essa linha de instrução acabou, e deve seguir
+               para a próxima. A estrutura básica dessa função será assim:
+            </p>
+
+            <pre><code class="language-c">
+            Int Main (void) {
+               [...];
+               return 0;
+               }
+            </code></pre>
+
+
+
+            <p class="mt-space">
+               Basicamente, o que está escrito é que nossa função main retorna um valor do tipo inteiro (Int),
+               não precisa de nada para funcionar, ou, não “recebe” nada “(void)” e retorna um valor inteiro 0 que
+               marca o fim da função, ou seja, o seu retorno interno, que informação ela vai devolver para o
+               computador, como estamos iniciando, isso não importa muito agora. Tudo que for escrito dentro das
+               chaves “{ }” é a nossa função, e só existe dentro dela. Podemos separar o que vamos escrever
+               nessa função em 3 etapas:
+            </p>
+
+            <ul>
+               <li>Entrada de dados</li>
+               <li>Processamento de dados/li>
+               <li>Saída de dados</li>
+            </ul>
+
+            <p class="mt-space">
+               O computador pode ler as instruções, pedir informações para o usuário usando texto na tela,
+               por exemplo, “Me informe um número: ”, “Escreva um nome: ”, “Digite sua letra do alfabeto favorita:
+               ”. Assim o computador vai guardar essas informações na sua memória. Dessa forma, quando
+               terminar de guardar essas informações, pode começar a processar esses dados, por exemplo,
+               multiplicar o número que foi informado anteriormente por 10, mudar a ordem dos seus nomes, contar
+               as letras de uma palavra especificada. E por fim, após realizar o que estiver na sua lista de tarefas,
+               pode devolver essas informações para o usuário, pela mesma tela na qual foram pedidas as
+               informações, seguindo os exemplos anteriores. alguns casos seriam: “O número informado
+               multiplicado por 10 é igual a 40”, “seu nome fora de ordem é Tal de Fulano”, e por assim vai.
+            </p>
+
+            <img src="/img/programacao em C/Introducao 3.jpg" alt="">
+
+            <h3 class="mt-space">Entrada de Dados</h3>
+
+            <p>
+               As variáveis são locais de armazenamento em memória onde os dados podem ser
+               armazenados e manipulados durante a execução de um programa, elas podem ter diversos tipos,
+               que indicam o conteúdo que irão armazenar, alguns deles seriam:
+            </p>
+
+            <img src="/img/programacao em C/Entrada de dados.jpg" alt="">
+
+            <p>
+               Aqui está um exemplo de como declarar e atribuir um valor a uma variável em c:
+            </p>
+
+            <pre><code class="language-c">
+            #include < stdio.h> 
+            #include < stdlib.h> 
+             
+            int main (void){ 
+               // Declara uma variável inteira chamada "idade" 
+               int idade; 
+
+               // Atribui o valor 25 à variável "idade"
+               idade = 25; 
+               
+               printf("Minha idade é: %i\n", idade); 
+               
+               return 0;
+            }
+            </code></pre>
+
+
+
+            <p class="mt-space">
+               Neste exemplo a variável “idade” é declarada como um inteiro. A ela então atribuída o valor
+               de 25 através da atribuição de valor “ idade=25”
+               O valor da variável “idade” é exibido na tela pela função printf().
+               A execução deste programa então seria: “ minha idade é :25”.
             </p>
 
 
+            <h3 class="mt-space">Função Scanf()</h3>
 
-            
-                   
+            <p>
+               A função scanf em C é utilizada para ler dados de entrada do usuário via teclado, ela permite a interação
+               com o usuário recebendo informações como números ou caracteres, e atribuindo a uma variável. Vejamos um
+               exemplo: 
+            </p>
+
+            <pre><code class="language-c">
+            #include < stdio.h>
+            int main(void){
+                  
+               int numero; 
+                     
+               printf("Digite um numero: ");
+               scanf("%d", &numero);
+               printf("0 numero digitado foi: %d", numero);
+                     
+               return 0;
+            }
+            </code></pre>
+
+            <h3 class="mt-space">Processamento de Dados</h3>
+
+            <p>
+               O processamento de dados é uma parte fundamental no nosso programa, nela podemos executar a
+               lógica do nosso programa. Com o processamento podemos coletar as informações, analisar e
+               executar toda a lógica do programa por si só.
+            </p>
+
+            <h3 class="mt-space">
+               Exemplo de Processamento de Dados Simples:
+            </h3>
+
+            <pre><code class="language-c">
+            #include < stdio.h>
+            #include < stdlib.h>
+            int main (void){ 
+               // Declaro as varíaveis que irei precisar 
+               int idade, ano; 
+               
+               // Aqui é onde solicitamos a idade fazendo parte da entrada de dados 
+               printf("Digite sua idade: "); 
+               scanf("%i",&idade); 
+               
+               // Aqui é onde eu processo os meus dados e faço a lógica do meu programa pegando 
+               // a variável idade que é atribuida pelo usuário e diminuindo pelo ano atual 
+               ano = 2024 - idade;
+
+               // saída dos dados processados pela minha lógica 
+               printf("Voce nasceu em %i\n", ano); 
+               
+               return 0;
+            }   
+            </code></pre>
+
+            <h3 class="mt-space">Saída de Dados</h3>
+
+            <p>
+               A saída de dados é uma parte crucial de qualquer programa, pois é onde apresentamos as
+               informações ao usuário. Utilizamos a função printf para exibir resultados na tela. Essa função faz
+               parte da biblioteca padrão e permite formatar e apresentar dados de diversos tipos
+            </p>
+
+            <h3 class="mt-space">Função Printf</h3>
+
+            <p>
+               A função printf é parte de um conjunto de funções pré-definidas armazenadas em uma
+               biblioteca padrão de rotinas da linguagem C. Ela permite apresentar na tela os valores de qualquer
+               tipo de dado.
+            </p>
+
             <%- include('../partials/card_exercices') %>
          </div>
 
          <div class="topicos">
             <h3>Tópicos</h3>
             <ul>
-               <li>Programação</li>
+               <li>Introdução</li>
+               <li>Entrada de Dados</li>
+               <li>Função Scanf</li>
+               <li>Processamento de Dados</li>
+               <li>Saída de Dados</li>      
+               <li>Função Printf</li>
             </ul>
          </div>
       </div>
 
-    </section>
+   </section>
 
-<%- include('../partials/footer') %>
+   <%- include('../partials/footer') %>
